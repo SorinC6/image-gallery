@@ -8,7 +8,8 @@ import {
   useLocation,
   useParams
 } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import UserGrid from "./components/Profile/UserGrid";
 
 // This example shows how to render two different screens
 // (or the same screen in a different context) at the same URL,
@@ -76,9 +77,14 @@ const Image = styled.div`
   width: 305px;
   height: 305px;
   background: no-repeat center/150% url(/img/${({ index }) => index}.jpeg);
-  &:hover {
-    opacity: 0.7;
-  }
+  transition: 0.3s opacity;
+  ${({ inModal }) =>
+    !inModal &&
+    css`
+      &:hover {
+        opacity: 0.7;
+      }
+    `}
 `;
 
 function Home() {
@@ -101,31 +107,32 @@ function Home() {
 const PhotoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 305px);
+  justify-content: center;
   gap: 20px;
-  width: 950px;
-  margin: auto;
-  margin-top: 80px;
 `;
 
 function Gallery() {
   let location = useLocation();
 
   return (
-    <PhotoGrid>
-      {IMAGES.map(i => (
-        <Link
-          key={i.id}
-          to={{
-            pathname: `/img/${i.id}`,
-            // This is the trick! This link sets
-            // the `background` in location state.
-            state: { background: location }
-          }}
-        >
-          <Image index={i.id} />
-        </Link>
-      ))}
-    </PhotoGrid>
+    <div>
+      <UserGrid />
+      <PhotoGrid>
+        {IMAGES.map(i => (
+          <Link
+            key={i.id}
+            to={{
+              pathname: `/img/${i.id}`,
+              // This is the trick! This link sets
+              // the `background` in location state.
+              state: { background: location }
+            }}
+          >
+            <Image index={i.id} />
+          </Link>
+        ))}
+      </PhotoGrid>
+    </div>
   );
 }
 
@@ -180,7 +187,7 @@ function Modal() {
         }}
       >
         <h1>{image.title}</h1>
-        <Image index={image.id} />
+        <Image inModal index={image.id} />
         <button type="button" onClick={back}>
           Close
         </button>
