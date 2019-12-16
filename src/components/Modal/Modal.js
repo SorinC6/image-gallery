@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { IMAGES } from "../../imageData";
-import { Image } from "../../App";
+import { Image } from "../Gallery/ImageView";
 import styled, { createGlobalStyle } from "styled-components";
 import { PostGrid, InfoGrid } from "./PostGrid";
 import { ProfileImage } from "../Profile/ProfileImg";
