@@ -30,6 +30,7 @@ const Description = styled.div`
   text-align: justify;
   text-justify: inter-word;
 `;
+
 export default function UserGrid() {
   return (
     <UserGridStyled>
