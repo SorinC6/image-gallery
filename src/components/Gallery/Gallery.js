@@ -45,7 +45,7 @@ const LinkGrid = styled.div`
 `;
 
 const ImageLink = styled(Link)`
-  background: no-repeat center/150% url(/img/${({ index }) => index}.jpeg);
+  background: no-repeat center/150% url(./img/${({ index }) => index}.jpeg);
   transition: 0.3s opacity;
 
   &:hover {
