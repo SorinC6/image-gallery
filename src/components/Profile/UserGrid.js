@@ -11,6 +11,14 @@ const UserGridStyled = styled.div`
     "photo name"
     "photo label"
     "photo description";
+
+  @media (max-width: 990px) {
+    grid-template-areas:
+      "photo name"
+      "label ."
+      "description .";
+    grid-gap: 10px;
+  }
 `;
 
 const Photo = styled.div`
@@ -19,16 +27,28 @@ const Photo = styled.div`
 const Name = styled.div`
   grid-area: name;
   font-size: 35px;
+  @media (max-width: 990px) {
+    align-self: center;
+  }
 `;
 const Label = styled.div`
   grid-area: label;
   font-weight: bold;
+
+  @media (max-width: 990px) {
+    padding: 0 20px;
+  }
 `;
 const Description = styled.div`
   grid-area: description;
   max-width: 400px;
   text-align: justify;
   text-justify: inter-word;
+
+  @media (max-width: 990px) {
+    padding: 0 20px;
+    grid-column: 1/3;
+  }
 `;
 
 export default function UserGrid() {

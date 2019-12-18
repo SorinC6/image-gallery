@@ -8,6 +8,10 @@ export const Image = styled.div`
   height: 305px;
   background: no-repeat center/150% url(/img/${({ index }) => index}.jpeg);
   transition: 0.3s opacity;
+
+  @media (max-width: 990px) {
+    width: 100%;
+  }
   ${({ inModal }) =>
     !inModal &&
     css`

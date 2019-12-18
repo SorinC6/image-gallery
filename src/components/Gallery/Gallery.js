@@ -1,9 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import UserGrid from "../Profile/UserGrid";
-import { Link, useLocation, use } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IMAGES } from "../../imageData";
-import { Image } from "./ImageView";
 
 const PhotoGrid = styled.div`
   display: grid;
@@ -17,6 +16,11 @@ const PhotoGrid = styled.div`
       gap: 5px;
       grid-auto-rows: 200px;
     `};
+  @media (max-width: 990px) {
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: calc(33vw - 10px);
+  }
 `;
 
 const TabLink = styled(Link)`
@@ -61,7 +65,6 @@ const ImageLink = styled(Link)`
 export default function Gallery({ match }) {
   let location = useLocation();
   const cascade = location.search === "?type=cascade";
-  console.log(cascade);
 
   return (
     <div>

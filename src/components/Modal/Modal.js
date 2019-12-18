@@ -21,6 +21,13 @@ const ModalStyled = styled.div`
   padding: 15;
   border: 2px solid #444;
   width: 600px;
+
+  @media (max-width: 990px) {
+    top: ${({ top }) => top}px;
+    left: 0;
+    right: 0;
+    width: auto;
+  }
 `;
 
 const UserDetail = styled.div`
@@ -28,6 +35,12 @@ const UserDetail = styled.div`
   justify-content: left;
   grid-template-columns: auto auto;
   gap: 10px;
+
+  @media (max-width: 990px) {
+    h2 {
+      align-self: center;
+    }
+  }
 `;
 export default function Modal() {
   let history = useHistory();
@@ -61,7 +74,7 @@ export default function Modal() {
           <InfoGrid>
             <UserDetail>
               <ProfileImage mini />
-              <h2>Image Gallery</h2>
+              <h2>Image</h2>
             </UserDetail>
             <div>
               <h2>{image.title}</h2>
