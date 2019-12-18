@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/SorinC6/Image-Gallery/static/css/main.9cb40cbe.chunk.css",
+    "main.js": "/SorinC6/Image-Gallery/static/js/main.4d2f234d.chunk.js",
+    "main.js.map": "/SorinC6/Image-Gallery/static/js/main.4d2f234d.chunk.js.map",
+    "runtime-main.js": "/SorinC6/Image-Gallery/static/js/runtime-main.ccd82a17.js",
+    "runtime-main.js.map": "/SorinC6/Image-Gallery/static/js/runtime-main.ccd82a17.js.map",
+    "static/js/2.0a38fed9.chunk.js": "/SorinC6/Image-Gallery/static/js/2.0a38fed9.chunk.js",
+    "static/js/2.0a38fed9.chunk.js.map": "/SorinC6/Image-Gallery/static/js/2.0a38fed9.chunk.js.map",
+    "index.html": "/SorinC6/Image-Gallery/index.html",
+    "precache-manifest.91ad8f8fc891483374170d1745c93572.js": "/SorinC6/Image-Gallery/precache-manifest.91ad8f8fc891483374170d1745c93572.js",
+    "service-worker.js": "/SorinC6/Image-Gallery/service-worker.js",
+    "static/css/main.9cb40cbe.chunk.css.map": "/SorinC6/Image-Gallery/static/css/main.9cb40cbe.chunk.css.map",
+    "static/js/2.0a38fed9.chunk.js.LICENSE": "/SorinC6/Image-Gallery/static/js/2.0a38fed9.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ccd82a17.js",
+    "static/js/2.0a38fed9.chunk.js",
+    "static/css/main.9cb40cbe.chunk.css",
+    "static/js/main.4d2f234d.chunk.js"
+  ]
+}
