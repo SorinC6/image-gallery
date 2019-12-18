@@ -1,7 +1,7 @@
 {
   "name": "image-gallery",
-  "version": "0.1.0",
-  "homepage": "https://sorinC6.github.io/Image-Gallery/",
+  "version": "0.3.0",
+  "homepage": "https://SorinC6.github.io/image-gallery",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
