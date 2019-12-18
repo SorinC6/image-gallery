@@ -1,8 +1,8 @@
 {
   "name": "image-gallery",
   "version": "0.1.0",
-  "homepage": "https://github.com/SorinC6/Image-Gallery",
-  "private": true,
+  "homepage": "https://sorinc6.github.io/Image-Gallery/",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
